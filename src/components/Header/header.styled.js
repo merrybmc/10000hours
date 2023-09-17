@@ -65,10 +65,13 @@ export const QuoteBox = styled.div`
 
   &::before {
     content: '';
+    display: inline-block;
     background-image: url(${leftQuote});
-    position: absolute;
-    left: -51px;
-    top: 91px;
+    /* position: absolute; */
+    /* left: -51px; */
+    /* top: 91px; */
+    /* width: 37px; */
+    /* height: 32px; */
     width: 37px;
     height: 32px;
 
@@ -98,4 +101,14 @@ export const StrongSpan = styled.span`
   @media (max-width: 767px) {
     font-size: 14px;
   }
+`;
+
+export const Test = styled.p`
+  color: rgba(252, 238, 33, 0.3);
+  text-align: center;
+  font-family: gmarket;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 `;
