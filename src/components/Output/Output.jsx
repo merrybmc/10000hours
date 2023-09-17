@@ -27,7 +27,7 @@ export default function Output({ job, time, view }) {
           </WordsBox>
           <BtnBox>
             <GoBtn onClick={() => setModalState(true)}>훈련하러 가기 GO!GO!</GoBtn>
-            <ShareBtn>공유하기</ShareBtn>
+            <ShareBtn onClick={() => alert('공유 완료!')}>공유하기</ShareBtn>
           </BtnBox>
         </Section>
       )}

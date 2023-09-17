@@ -17,6 +17,11 @@ export const ModalContainer = styled.div`
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
 
   position: absolute;
+
+  @media (max-width: 767px) {
+    width: 330px;
+    height: 500px;
+  }
 `;
 
 export const ModalBackUp = styled.div`
@@ -38,15 +43,32 @@ export const Title = styled.p`
 
   padding-top: 76px;
   padding-bottom: 4px;
+
+  @media (max-width: 767px) {
+    padding-top: 40px;
+    padding-bottom: 0;
+    color: #5b2386;
+    font-size: 64px;
+  }
 `;
 export const SubText = styled.p`
   font-size: 36px;
 
   padding-bottom: 33px;
+
+  @media (max-width: 767px) {
+    font-size: 36px;
+  }
 `;
 
 export const LicatImg = styled.img`
   padding-bottom: 74px;
+
+  @media (max-width: 767px) {
+    width: 300px;
+    height: 200px;
+    padding-bottom: 25px;
+  }
 `;
 
 export const Btn = styled.button`
@@ -61,4 +83,10 @@ export const Btn = styled.button`
   border-radius: 56px;
   background: #fcee21;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+    padding: 18px 45px;
+    border-radius: 13px;
+  }
 `;

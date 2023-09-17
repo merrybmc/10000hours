@@ -6,7 +6,12 @@ export const HeaderComponent = styled.header`
   display: flex;
   align-items: center;
   flex-direction: column;
+
   padding-top: 140px;
+
+  @media (max-width: 767px) {
+    padding-top: 41px;
+  }
 `;
 
 export const Logo = styled.img`
@@ -29,11 +34,12 @@ export const LogoCircle = styled.img`
 `;
 
 export const Title = styled.h1`
+  padding-top: 125px;
+
   font-family: tvn;
   font-size: 36px;
-  font-weight: 700;
   color: #f5df4d;
-  padding-top: 125px;
+  font-weight: 700;
 
   @media (max-width: 767px) {
     padding-top: 69px;
@@ -43,6 +49,7 @@ export const Title = styled.h1`
 
 export const QuoteBox = styled.div`
   padding-top: 78px;
+
   position: relative;
 
   @media (max-width: 767px) {
@@ -53,41 +60,41 @@ export const QuoteBox = styled.div`
     content: '';
     background-image: url(${rightQuote});
     position: absolute;
-    right: -51px;
     top: 91px;
+    right: -51px;
     width: 37px;
     height: 32px;
 
     @media (max-width: 767px) {
-      top: 75px;
+      top: 85px;
+      right: -50px;
     }
   }
 
   &::before {
     content: '';
-    display: inline-block;
     background-image: url(${leftQuote});
-    /* position: absolute; */
-    /* left: -51px; */
-    /* top: 91px; */
-    /* width: 37px; */
-    /* height: 32px; */
+    position: absolute;
+    top: 91px;
+    left: -51px;
     width: 37px;
     height: 32px;
 
     @media (max-width: 767px) {
-      top: 75px;
+      top: 85px;
+      left: -50px;
     }
   }
 `;
 
 export const Quote = styled.h2`
-  text-align: center;
-  color: #fff;
+  padding-bottom: 18px;
+
   font-family: gmarket;
   font-size: 18px;
+  color: #fff;
+  text-align: center;
   font-weight: 400;
-  padding-bottom: 18px;
 
   @media (max-width: 767px) {
     font-size: 14px;
@@ -101,14 +108,4 @@ export const StrongSpan = styled.span`
   @media (max-width: 767px) {
     font-size: 14px;
   }
-`;
-
-export const Test = styled.p`
-  color: rgba(252, 238, 33, 0.3);
-  text-align: center;
-  font-family: gmarket;
-  font-size: 96px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
 `;

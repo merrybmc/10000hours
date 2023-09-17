@@ -31,7 +31,7 @@ export default function Input() {
           />
           전문가가 될 것이다.
         </Words>
-        {window.innerWidth < 768 ? (
+        {window.innerWidth > 768 ? (
           <>
             <Words>
               그래서 앞으로 매일 하루에
@@ -43,6 +43,10 @@ export default function Input() {
               />
               시간씩 훈련할 것이다.
             </Words>
+            <BtnBox>
+              <Btn>나는 며칠 동안 훈련을 해야 1만 시간이 될까?</Btn>
+              <FingerImg src={finger} alt='fingerImg' />
+            </BtnBox>
           </>
         ) : (
           <>
@@ -56,13 +60,15 @@ export default function Input() {
               />
               시간씩 훈련할 것이다.
             </Words>
+            <BtnBox>
+              <Btn>
+                나는 며칠 동안 훈련을 해야
+                <br /> 1만 시간이 될까?
+              </Btn>
+              <FingerImg src={finger} alt='fingerImg' />
+            </BtnBox>
           </>
         )}
-
-        <BtnBox>
-          <Btn>나는 며칠 동안 훈련을 해야 1만 시간이 될까?</Btn>
-          <FingerImg src={finger} alt='fingerImg' />
-        </BtnBox>
       </Form>
       <Output job={job.display} time={time.display} view={viewState} />
     </>

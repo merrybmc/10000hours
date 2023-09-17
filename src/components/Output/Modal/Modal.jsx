@@ -17,7 +17,14 @@ export default function Modal({ setModalState }) {
         <Title>화이팅!!♥♥♥</Title>
         <SubText>당신의 꿈을 응원합니다!</SubText>
         <LicatImg src={licat} alt='licatImg' />
-        <Btn onClick={() => onCloseModal()}>종료하고 진짜 훈련하러 가기 GO!GO!</Btn>
+        {window.innerWidth > 768 ? (
+          <Btn onClick={() => onCloseModal()}>종료하고 진짜 훈련하러 가기 GO!GO!</Btn>
+        ) : (
+          <Btn onClick={() => onCloseModal()}>
+            종료하고 진짜
+            <br /> 훈련하러 가기 GO!GO!
+          </Btn>
+        )}
       </ModalContainer>
     </ModalBackUp>
   );
